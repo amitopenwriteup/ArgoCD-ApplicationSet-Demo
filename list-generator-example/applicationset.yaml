@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: color-applicaitonset
+  name: ashish-color-applicaitonset
   namespace: argocd
 spec:
   generators:
@@ -19,7 +19,7 @@ spec:
       project: default
       source:
         repoURL: git@github.com:amitopenwriteup/ArgoCD-ApplicationSet-Demo.git
-        targetRevision: HEAD
+        targetRevision: ashish
         path: list-generator-example/deployment
       destination:
         # default cluster as destination, you can define multiple clusters in ArgoCD UI
