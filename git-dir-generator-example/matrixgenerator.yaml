@@ -27,9 +27,12 @@ spec:
         targetRevision: HEAD
         path: '{{path}}'
       destination:
-        server: https://6C6D06137920FB7B2ADE9485E8FF6ABF.gr7.ap-south-1.eks.amazonaws.com
+        server: https://92389502100E5959297F1C3CEC2CA298.sk1.ap-south-1.eks.amazonaws.com
         namespace: '{{namespace}}'
       syncPolicy:
         automated:
           prune: true
           selfHeal: true
+        syncOptions:
+        - CreateNamespace=true
+
