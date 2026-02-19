@@ -23,7 +23,7 @@ spec:
         path: list-generator-example/deployment
       destination:
         # default cluster as destination, you can define multiple clusters in ArgoCD UI
-        server: https://6C6D06137920FB7B2ADE9485E8FF6ABF.gr7.ap-south-1.eks.amazonaws.com
+        server: https://kubernetes.default.svc
         # will deploy to different namespaces as different destinations 
         namespace: '{{namespace}}'
       syncPolicy:
