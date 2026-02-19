@@ -8,7 +8,7 @@ spec:
   - matrix:
       generators:
       - git:
-          repoURL: git@github.com:amitopenwriteup/ArgoCD-ApplicationSet-Demo.git
+          repoURL: https://github.com/amitopenwriteup/ArgoCD-ApplicationSet-Demo.git
           revision: HEAD
           directories:
           - path: git-dir-generator-example/argo-projects/*
@@ -21,13 +21,13 @@ spec:
     metadata:
       name: '{{path.basename}}-{{namespace}}'
     spec:
-      project: stage-devseccops
+      project: default
       source:
-        repoURL: git@github.com:amitopenwriteup/ArgoCD-ApplicationSet-Demo.git
+        repoURL: https://github.com/amitopenwriteup/ArgoCD-ApplicationSet-Demo.git
         targetRevision: HEAD
         path: '{{path}}'
       destination:
-        server: https://92389502100E5959297F1C3CEC2CA298.sk1.ap-south-1.eks.amazonaws.com
+        server: https://kubernetes.default.svc
         namespace: '{{namespace}}'
       syncPolicy:
         automated:
